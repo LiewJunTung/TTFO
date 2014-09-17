@@ -7,7 +7,7 @@ public enum ApiFactory {
 
     INSTANCE;
 
-    protected TTFOApi getTTFOApi(){
+    public TTFOApi getTTFOApi(){
         return TTFOApiImpl.INSTANCE;
     }
 }

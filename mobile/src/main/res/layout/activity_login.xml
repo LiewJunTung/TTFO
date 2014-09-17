@@ -32,7 +32,7 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editText_username"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -49,7 +49,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText_password"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -69,7 +69,7 @@
         android:typeface="sans" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button_login"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"

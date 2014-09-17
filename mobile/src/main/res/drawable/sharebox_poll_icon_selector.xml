@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/sharebox_ic_poll_black_24" />
+    <item android:drawable="@drawable/sharebox_ic_poll_grey_24" />
+</selector>

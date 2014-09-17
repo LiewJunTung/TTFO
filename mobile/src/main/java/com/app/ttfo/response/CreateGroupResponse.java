@@ -7,6 +7,5 @@ public class CreateGroupResponse {
 
     private String message;
     private boolean result;
-    private Group group;
 
 }

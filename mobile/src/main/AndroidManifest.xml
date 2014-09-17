@@ -28,7 +28,18 @@
         <activity android:name=".SignUpActivity" android:screenOrientation="portrait" />
         <activity android:name=".JoinGroupActivity" android:screenOrientation="portrait" />
         <activity android:name=".LockScreenActivity" android:screenOrientation="portrait" />
-        <activity android:name=".GroupActivity" android:screenOrientation="portrait" />
+        <receiver
+            android:name=".receiver.MyAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/admin"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".GroupActivity" />
 
     </application>
 

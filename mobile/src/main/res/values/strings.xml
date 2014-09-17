@@ -10,10 +10,16 @@
     <string name="password">Password</string>
     <string name="Login">Login</string>
     <string name="fbLogin">FB Login</string>
-    <string name="sign_up">"Sign Up..."</string>
+    <string name="sign_up">"Sign Up"</string>
     <string name="attempts">Attempts Left:</string>
+
     <string name="helptext_user">Username</string>
     <string name="helptext_pw">Password</string>
+    <string name="helptext_email">Email</string>
+
+    <string name="group_create">Create Group</string>
+    <string name="group_join">Join Group</string>
+
     <string name="walkwithme_title">Walk With Me</string>
     <string name="socialmeet_title">Social Meeting</string>
     <string name="text_required_field">Required field</string>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<inset android:insetLeft="@dimen/point_marker_padding" android:insetRight="@dimen/point_marker_padding" android:insetTop="@dimen/point_marker_padding" android:insetBottom="@dimen/point_marker_padding"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <shape android:shape="oval">
-        <size android:height="@dimen/point_marker_size" android:width="@dimen/point_marker_size" />
-        <solid android:color="#a6ffffff" />
-        <stroke android:width="2.0dip" android:color="#a6404040" />
-    </shape>
-</inset>

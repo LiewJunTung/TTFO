@@ -61,10 +61,9 @@
         android:inputType="textPassword"
         android:password="true"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignStart="@+id/editText1"
+        android:layout_alignLeft="@+id/editText_username"
+        android:layout_alignStart="@+id/editText_username"
         android:textColor="#ff333333"
-        android:fontFamily="@string/password"
         android:focusableInTouchMode="true"
         android:typeface="sans" />
 
@@ -72,11 +71,11 @@
         android:id="@+id/button_login"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editText_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:onClick="login"
-        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignLeft="@+id/editText_username"
         android:background="@drawable/login_button"
         android:text="@string/Login"
         android:textColor="#ffffffff" />
@@ -85,11 +84,11 @@
         android:id="@+id/button2"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editText_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:onClick="fbLogin"
-        android:layout_alignRight="@+id/editText1"
+        android:layout_alignRight="@+id/editText_username"
         android:background="@drawable/fb_login_button"
         android:text="@string/fbLogin"
         android:textColor="#ffffffff" />
@@ -109,6 +108,7 @@
         android:id="@+id/textView"
         android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="24dp"/>
+        android:paddingBottom="24dp"
+        android:onClick="toSignUp"/>
 
 </RelativeLayout>

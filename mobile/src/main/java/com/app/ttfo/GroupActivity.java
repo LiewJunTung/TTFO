@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
@@ -35,6 +36,7 @@ public class GroupActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group);
+        ButterKnife.inject(this);
 
         joinGroupBtn.setOnClickListener(onJoinGroupClick);
         createGroupBtn.setOnClickListener(onCreateGroupClick);

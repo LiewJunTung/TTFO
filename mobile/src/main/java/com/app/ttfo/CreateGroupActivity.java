@@ -12,7 +12,7 @@ import butterknife.InjectView;
 /**
  * Created by kevintanhongann on 9/17/14.
  */
-public class AddGroupActivity extends Activity {
+public class CreateGroupActivity extends Activity {
 
     @InjectView(R.id.button_invitePeople)
     Button invitePeopleBtn;

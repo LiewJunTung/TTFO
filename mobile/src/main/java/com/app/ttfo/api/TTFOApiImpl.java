@@ -9,6 +9,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.app.ttfo.callback.CreateGroupCallback;
 import com.app.ttfo.callback.JoinGroupCallback;
+import com.app.ttfo.callback.MemberCallback;
 import com.app.ttfo.exception.CreateGroupException;
 import com.app.ttfo.exception.JoinGroupException;
 import com.app.ttfo.request.CreateGroupRequest;
@@ -27,7 +28,7 @@ public enum TTFOApiImpl implements TTFOApi {
 
     @Override
     public void joinGroup(Context context, String groupCode, String name, String email, final JoinGroupCallback callback) {
-        String url = "";
+        String url = "http://ttfo.herokapp.com/joinGroup";
         JoinGroupRequest request = new JoinGroupRequest(Request.Method.POST, url, groupCode, name, email, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -44,7 +45,7 @@ public enum TTFOApiImpl implements TTFOApi {
 
     @Override
     public void createGroup(Context context, String groupCode, String name, String email, final CreateGroupCallback callback) {
-        String url = "";
+        String url = "http://ttfo.herokapp.com/createGroup";
 
         CreateGroupRequest request = new CreateGroupRequest(Request.Method.POST, url, groupCode, name, email, new Response.ErrorListener() {
             @Override
@@ -60,10 +61,22 @@ public enum TTFOApiImpl implements TTFOApi {
         getRequestQueue(context).add(request);
     }
 
+    @Override
+    public void createMember(Context context, String username, String password, String email, MemberCallback callback) {
+
+
+
+
+    }
+
     private synchronized RequestQueue getRequestQueue(Context context) {
         if (rq == null) {
             rq = Volley.newRequestQueue(context);
         }
         return rq;
     }
+
+
+
+
 }

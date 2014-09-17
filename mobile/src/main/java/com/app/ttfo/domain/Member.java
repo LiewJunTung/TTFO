@@ -5,6 +5,12 @@ package com.app.ttfo.domain;
  */
 public class Member {
 
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
     private String name;
 
     private String email;
@@ -20,7 +26,8 @@ public class Member {
     @Override
     public String toString() {
         return "Member{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

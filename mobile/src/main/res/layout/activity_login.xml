@@ -1,7 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_field"
+        android:id="@+id/frameLayout2"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignTop="@+id/imageView1">
+    </FrameLayout>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ttfo_logo"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:hint="@string/helptext_user"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView1"
+        android:textColor="#ff333333"
+        android:typeface="sans">
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:hint="@string/helptext_pw"
+        android:inputType="textPassword"
+        android:password="true"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignStart="@+id/editText1"
+        android:textColor="#ff333333"
+        android:fontFamily="@string/password"
+        android:focusableInTouchMode="true"
+        android:typeface="sans" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="login"
+        android:layout_alignLeft="@+id/editText1"
+        android:background="@drawable/login_button"
+        android:text="@string/Login"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="fbLogin"
+        android:layout_alignRight="@+id/editText1"
+        android:background="@drawable/fb_login_button"
+        android:text="@string/fbLogin"
+        android:textColor="#ffffffff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/sign_up"
+        android:id="@+id/textView"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="24dp"/>
+
+</RelativeLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/ic_fo_retrolux_9_default" />
-    <item android:drawable="@drawable/active_item_shuffle_overlay" />
-</layer-list>

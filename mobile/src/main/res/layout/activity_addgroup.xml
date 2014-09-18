@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:padding="@dimen/activity_horizontal_margin"
-    android:layout_height="match_parent">
+    android:padding="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:background="@drawable/backrepeat_smallsteps">
 
-    <TextView
-        android:text="AALAJDJKAL"
-        android:layout_width="match_parent"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="108dp"
+        android:text="CODE: ASDF123"
+        android:id="@+id/button_createGroup"
+        android:textSize="36sp"
+        android:textColor="@drawable/pressed_text_green"
+        android:background="@drawable/round_button_green"
+        android:enabled="false"
+        android:focusable="false" />
 
-    <Button android:id="@+id/button_invitePeople"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="108dp"
+        android:text="Start Locking"
+        android:id="@+id/button_joinGroup"
+        android:textSize="36sp"
+        android:textColor="@drawable/pressed_text_orange"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_orange"/>
+
 </LinearLayout>

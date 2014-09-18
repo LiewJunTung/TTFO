@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import com.app.ttfo.receiver.MyAdminReceiver;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import butterknife.InjectView;
 import de.greenrobot.event.EventBus;
 
@@ -70,6 +73,14 @@ public class LockScreenActivity extends Activity {
             }.start();
         }*/
 
+        new Timer().schedule(new MyTimerClass(), 5000);
+    }
+
+    class MyTimerClass extends TimerTask {
+        @Override
+        public void run() {
+            finish();
+        }
     }
 
     @Override

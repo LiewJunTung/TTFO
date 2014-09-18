@@ -40,6 +40,7 @@
             </intent-filter>
         </receiver>
         <activity android:name=".GroupActivity" />
+        <activity android:name=".GroupDetailsActivity" />
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

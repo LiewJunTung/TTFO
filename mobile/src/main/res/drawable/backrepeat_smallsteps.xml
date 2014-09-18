@@ -2,6 +2,6 @@
 
 <bitmap
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/linedpaper"
+    android:src="@drawable/smallsteps"
     android:tileMode="repeat"
     android:dither="true" />

@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/backrepeat_smallsteps">
+    android:background="@drawable/background">
 
     <TextView
         android:text="@string/hello_user"
@@ -35,7 +35,7 @@
         android:text="@string/walkwithme_title"
         android:id="@+id/button_walkWithMe"
         android:textSize="36sp"
-        android:textColor="@drawable/pressed_text_green"
+        android:textColor="#ffffffff"
         android:layout_marginTop="50dp"
         android:background="@drawable/round_button_green"/>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:padding="@dimen/activity_vertical_margin"
     android:layout_height="match_parent"
-    android:background="@drawable/backrepeat_smallsteps">
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/textView_groupCode"

@@ -6,7 +6,8 @@
     android:gravity="center"
     android:padding="@dimen/activity_vertical_margin"
     android:layout_height="match_parent"
-    android:background="@drawable/backrepeat_smallsteps">
+    android:background="@drawable/bg"
+    android:baselineAligned="true">
 
     <Button
         android:layout_width="fill_parent"
@@ -14,7 +15,7 @@
         android:text="@string/group_create"
         android:id="@+id/button_createGroup"
         android:textSize="36sp"
-        android:textColor="@drawable/pressed_text_green"
+        android:textColor="#FFFFFFFF"
         android:background="@drawable/round_button_green"/>
 
     <Button

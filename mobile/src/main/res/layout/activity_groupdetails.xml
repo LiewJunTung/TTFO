@@ -4,6 +4,32 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button android:background="@null"
+        android:text="Kevin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:text="JT123"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:text="Abu"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:text="Anak Ayam"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:text="Uncle Chan"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button android:id="@+id/button_startLock"
         android:text="Start LOCK"
         android:layout_width="match_parent"

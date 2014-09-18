@@ -8,12 +8,20 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView_groupCode"
         android:text="AALAJDJKAL"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="40dp"
         android:layout_height="wrap_content" />
 
-    <Button android:id="@+id/button_invitePeople"
+    <Button
+        android:id="@+id/button_invitePeople"
         android:layout_width="match_parent"
+        android:text="Invite People"
+        android:layout_height="wrap_content" />
+    <Button android:id="@+id/button_gotoGroup"
+        android:layout_width="match_parent"
+        android:text="Go to Group"
         android:layout_height="wrap_content" />
 </LinearLayout>

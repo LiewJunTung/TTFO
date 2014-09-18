@@ -1,6 +1,7 @@
 package com.app.ttfo;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -51,10 +52,14 @@ public class CreateGroupActivity extends Activity {
         setContentView(R.layout.activity_addgroup);
         ButterKnife.inject(this);
         ttfoApi = ApiFactory.INSTANCE.getTTFOApi();
+        final ProgressDialog progressDialog = ProgressDialog.show(this, "", "Creating group", false, false);
         ttfoApi.createGroup(getApplicationContext(), tvGroupId.getText().toString(), "JT123", "", new CreateGroupCallback() {
             @Override
             public void onFail(CreateGroupException exception) {
                 Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
+                if(progressDialog.isShowing()){
+                    progressDialog.dismiss();
+                }
             }
 
             @Override
@@ -63,6 +68,9 @@ public class CreateGroupActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "Group created. ", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplicationContext(), response.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+                if(progressDialog.isShowing()){
+                    progressDialog.dismiss();
                 }
             }
         });

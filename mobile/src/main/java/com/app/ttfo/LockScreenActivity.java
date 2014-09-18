@@ -1,20 +1,19 @@
 package com.app.ttfo;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.KeyguardManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.ttfo.receiver.MyAdminReceiver;
 
 import butterknife.InjectView;
-import butterknife.Optional;
 import de.greenrobot.event.EventBus;
 
 /**
@@ -26,19 +25,24 @@ public class LockScreenActivity extends Activity {
     private ComponentName mComponentName;
     private static final int ADMIN_INTENT = 15;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lockscreen);
+        setContentView(R.layout.activity_lockscreen);
         mDevicePolicyManager = (DevicePolicyManager) getSystemService(
                 Context.DEVICE_POLICY_SERVICE);
         mComponentName = new ComponentName(this, MyAdminReceiver.class);
-
+        TextView tvStatus = (TextView) findViewById(R.id.textView_status);
         String description = "You need to activate device admin to continue";
 
         boolean isAdmin = mDevicePolicyManager.isAdminActive(mComponentName);
         if (isAdmin) {
-            mDevicePolicyManager.lockNow();
+            KeyguardManager.KeyguardLock key;
+            KeyguardManager km = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
+            key = km.newKeyguardLock("IN");
+            key.disableKeyguard();
+            tvStatus.setText("TTFO is activated!");
         } else {
             Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
             intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, mComponentName);
@@ -66,6 +70,18 @@ public class LockScreenActivity extends Activity {
             }.start();
         }*/
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ActivityManager activityManager = (ActivityManager) getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
+        activityManager.moveTaskToFront(getTaskId(), 0);
     }
 
     @Override

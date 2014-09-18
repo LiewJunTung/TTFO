@@ -37,4 +37,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:5.1.2'
     compile project(':volley')
     compile project(':numberpicker')
+    compile 'de.greenrobot:eventbus:2.2.1'
+    compile 'joda-time:joda-time:2.3'
 }

@@ -3,9 +3,11 @@ package com.app.ttfo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import butterknife.ButterKnife;
@@ -42,6 +44,13 @@ public class MainActivity extends Activity {
         ButterKnife.inject(this);
         walkWithMeBtn.setOnClickListener(onWalkWithMeClick);
         meetingBtn.setOnClickListener(onMeetingClick);
+
+        Settings.System.putInt(this.getContentResolver(),
+                Settings.System.SCREEN_BRIGHTNESS, 100);
+
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.screenBrightness = 1 / 1.0f;
+        getWindow().setAttributes(lp);
     }
 
 

@@ -17,7 +17,7 @@
         android:textSize="36sp"
         android:textColor="@drawable/pressed_text_orange"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_button_orange" />
+        android:background="@drawable/round_button_orange"/>
 
     <Button android:background="@null"
         android:text="Kevin"
@@ -53,5 +53,4 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:textColor="@drawable/pressed_text_orange"/>
-
 </LinearLayout>

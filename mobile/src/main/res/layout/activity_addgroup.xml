@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:background="@drawable/backrepeat_smallsteps">
+
+    <TextView
+        android:id="@+id/textView_groupCode"
+        android:text="AALAJDJKAL"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:textSize="40dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_invitePeople"
+        android:layout_width="match_parent"
+        android:textSize="36sp"
+        android:textColor="@drawable/pressed_text_orange"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_orange"
+        android:text="Invite People"
+        android:layout_height="108dp"/>
+
+    <Button android:id="@+id/button_gotoGroup"
+        android:layout_width="match_parent"
+        android:textSize="36sp"
+        android:textColor="@drawable/pressed_text_orange"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_orange"
+        android:text="Go to Group"
+        android:layout_height="108dp" />
+
+</LinearLayout>

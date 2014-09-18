@@ -1,5 +1,7 @@
 package com.app.ttfo.request;
 
+import android.util.Log;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -21,22 +23,19 @@ public class CreateGroupRequest extends Request<CreateGroupResponse> {
     private Response.Listener<CreateGroupResponse> listener;
     private String groupCode;
     private String name;
-    private String email;
 
     public CreateGroupRequest(int method, String url, String groupCode, String name, String email, Response.ErrorListener errorListener, Response.Listener<CreateGroupResponse> listener) {
         super(method, url, errorListener);
         this.listener = listener;
         this.groupCode = groupCode;
         this.name = name;
-        this.email = email;
     }
 
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
         Map<String, String> params = new HashMap<String, String>();
-        params.put("groupCode", groupCode);
-        params.put("name", name);
-        params.put("email", email);
+        params.put("groupid", groupCode);
+        params.put("username", name);
         return params;
     }
 
@@ -45,6 +44,7 @@ public class CreateGroupRequest extends Request<CreateGroupResponse> {
         try {
             String json = new String(response.data,
                     HttpHeaderParser.parseCharset(response.headers));
+            Log.d("create group", "createGroup "+json);
             CreateGroupResponse createGroupResponse = new Gson().fromJson(json, CreateGroupResponse.class);
             return Response.success(createGroupResponse, HttpHeaderParser.parseCacheHeaders(response));
         } catch (UnsupportedEncodingException e) {

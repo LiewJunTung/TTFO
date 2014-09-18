@@ -53,20 +53,4 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:textColor="@drawable/pressed_text_orange"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20%"
-        android:onClick="toTwenty"
-        android:id="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="100%"
-        android:onClick="toHundred"
-        android:id="@+id/button2"
-        android:layout_gravity="center_horizontal" />
-
 </LinearLayout>

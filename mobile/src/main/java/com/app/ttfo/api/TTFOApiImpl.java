@@ -34,9 +34,9 @@ public enum TTFOApiImpl implements TTFOApi {
     private RequestQueue rq;
 
     @Override
-    public void joinGroup(Context context, String groupCode, String name, String email, final JoinGroupCallback callback) {
+    public void joinGroup(Context context, String groupCode, String name, final JoinGroupCallback callback) {
         String url = "http://ttfo.herokapp.com/joinGroup";
-        JoinGroupRequest request = new JoinGroupRequest(Request.Method.POST, url, groupCode, name, email, new Response.ErrorListener() {
+        JoinGroupRequest request = new JoinGroupRequest(Request.Method.POST, url, groupCode, name, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 callback.onFail(new JoinGroupException(error.getMessage(), error));

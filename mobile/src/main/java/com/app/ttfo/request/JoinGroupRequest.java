@@ -20,23 +20,20 @@ public class JoinGroupRequest extends Request<JoinGroupResponse> {
 
     private Response.Listener<JoinGroupResponse> listener;
     private String groupCode;
-    private String name;
-    private String email;
+    private String username;
 
-    public JoinGroupRequest(int method, String url, String groupCode, String name, String email,  Response.ErrorListener errorListener, Response.Listener<JoinGroupResponse> listener) {
+    public JoinGroupRequest(int method, String url, String groupCode, String username,  Response.ErrorListener errorListener, Response.Listener<JoinGroupResponse> listener) {
         super(method, url, errorListener);
         this.listener = listener;
         this.groupCode = groupCode;
-        this.name = name;
-        this.email= email;
+        this.username = username;
     }
 
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
         Map<String, String> params = new HashMap<String, String>();
-        params.put("groupCode", groupCode);
-        params.put("name", name);
-        params.put("email", email);
+        params.put("groupid", groupCode);
+        params.put("username", username);
         return params;
     }
 

@@ -35,7 +35,7 @@ public enum TTFOApiImpl implements TTFOApi {
 
     @Override
     public void joinGroup(Context context, String groupCode, String name, final JoinGroupCallback callback) {
-        String url = "http://ttfo.herokapp.com/joinGroup";
+        String url = "http://ttfo.herokuapp.com/joinGroup";
         JoinGroupRequest request = new JoinGroupRequest(Request.Method.POST, url, groupCode, name, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -52,7 +52,7 @@ public enum TTFOApiImpl implements TTFOApi {
 
     @Override
     public void createGroup(Context context, String groupCode, String name, String email, final CreateGroupCallback callback) {
-        String url = "http://ttfo.herokapp.com/createGroup";
+        String url = "http://ttfo.herokuapp.com/createGroup";
 
         CreateGroupRequest request = new CreateGroupRequest(Request.Method.POST, url, groupCode, name, email, new Response.ErrorListener() {
             @Override
@@ -70,7 +70,7 @@ public enum TTFOApiImpl implements TTFOApi {
 
     @Override
     public void createMember(Context context, String username, String password, String email, final MemberCallback callback) {
-        String url = "http://ttfo.herokapp.com/createGroup";
+        String url = "http://ttfo.herokuapp.com/createMember";
         MemberRequest request = new MemberRequest(Request.Method.POST, url, username, password, email, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {

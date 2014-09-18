@@ -3,9 +3,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backrepeat_smallsteps">
+
     <Button android:id="@+id/button_startLock"
         android:text="Start LOCK"
+        android:layout_width="fill_parent"
+        android:layout_height="108dp"
+        android:textSize="36sp"
+        android:textColor="@drawable/pressed_text_orange"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_orange" />
+
+    <Button android:background="@null"
+        android:text="Kevin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@drawable/pressed_text_green"/>
+
+    <Button android:text="JT123"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@drawable/pressed_text_green"/>
+
+    <Button android:text="Abu"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@drawable/pressed_text_green"/>
+
+    <Button android:text="Anak Ayam"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@drawable/pressed_text_green"/>
+
+    <Button android:text="Uncle Chan"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@drawable/pressed_text_green"/>
+
 </LinearLayout>

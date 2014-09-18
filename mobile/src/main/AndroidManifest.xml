@@ -42,5 +42,5 @@
         <activity android:name=".GroupActivity" />
 
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
